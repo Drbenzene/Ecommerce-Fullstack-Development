@@ -1,0 +1,45 @@
+{
+  "name": "ecommerce",
+  "version": "0.0.1",
+  "description": "A Full Stack Ecommerce store consuming API's and Data Fetch ",
+  "type": "module",
+  "main": "server",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "npm start --prefix frontend",
+    "server": "nodemon backend/server",
+    "dev": "concurrently \"npm run client\" \"npm run server\""
+  },
+  "keywords": [
+    "Ecommerce",
+    "Fullstack",
+    "Store",
+    "Ecommerce",
+    "Store",
+    "Shopping",
+    "Store"
+  ],
+  "author": "Boyinbode Ebenezer Ayomide",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "concurrently": "^7.3.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "flutterwave-node-v3": "^1.0.11",
+    "got": "^12.3.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^4.9.0",
+    "mongoose": "^6.5.3",
+    "morgan": "^1.10.0",
+    "react-cookie": "^4.1.1",
+    "redux-persist": "^6.0.0",
+    "uniqid": "^5.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
