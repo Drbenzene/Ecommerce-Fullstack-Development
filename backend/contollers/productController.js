@@ -1,7 +1,7 @@
 import axios from "axios"
 import Product from "../models/productModel.js"
 
-const fetchProduct = async (req, res) => {
+const fetchProduct = async (res) => {
     try {
         const product = await axios.get("https://fakestoreapi.com/products")
         const productData = product.data
@@ -33,7 +33,7 @@ const fetchProduct = async (req, res) => {
     }
 }
 
-const getProduct = async (req, res) => {
+const getProduct = async (res) => {
     try {
         const product = await Product.find()
         res.status(200).json( {

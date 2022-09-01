@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import uniqid from 'uniqid';
 
 const ProductSchema = new mongoose.Schema({
     id: {type: String},

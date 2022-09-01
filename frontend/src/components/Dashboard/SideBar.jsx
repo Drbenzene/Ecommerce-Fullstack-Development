@@ -16,10 +16,10 @@ function SideBar() {
                   </li>
                   <li className="app-sidebar__heading">Orders</li>
                   <li>
-                    <a href="#">
+                    <Link to="/">
                       <i className="metismenu-icon pe-7s-diamond" />
                       Orders
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>

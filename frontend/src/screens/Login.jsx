@@ -1,12 +1,12 @@
-import React,{ useEffect, useState} from "react";
+import React,{ useState} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "../components/Header";
 import axios from "axios";
 import {useDispatch} from "react-redux";
 import { cusAlert } from "../utils/utils";
 import {useNavigate} from "react-router-dom";
-import {userLoggedIn, userLoggedOut} from "../redux/actions/userAction";
-import {saveToLocalStorage, loadFromLocalStorage} from "../utils/localStorage";
+import {userLoggedIn} from "../redux/actions/userAction";
+import {saveToLocalStorage} from "../utils/localStorage";
 
 function Login() {
   const dispatch = useDispatch()

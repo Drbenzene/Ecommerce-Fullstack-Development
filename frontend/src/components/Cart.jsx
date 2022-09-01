@@ -37,8 +37,6 @@ function Cart() {
       setCartItems(newCartItems);
       saveToLocalStorage("cartItems",newCartItems);
     }
-    // setCartItems(cartItems.filter(item => item.id !== id));
-    // saveToLocalStorage("cartItems",cartItems)
 
   }
 
@@ -60,7 +58,6 @@ const EachCartItem = ({ cartItems, removeFromCartHandler, token}) => {
 
   
   const navigate = useNavigate();
-  const dispatch = useDispatch();
   return (
     <div className="container mt-5">
       <div className="row w-100">

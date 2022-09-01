@@ -1,15 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useDispatch, useSelector } from "react-redux";
 import countries from "../utils/countries";
 import { uniqueId } from "../utils/utils.js";
-import { useNavigate } from "react-router-dom";
 import { loadFromLocalStorage} from "../utils/localStorage";
 import axios from "axios";
 
 function CheckOut() {
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
 
 
   const [cartItems, setCartItems] = useState([]);

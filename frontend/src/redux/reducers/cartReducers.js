@@ -8,7 +8,6 @@ import {
 import Swal from "sweetalert2";
 import {
   loadFromLocalStorage,
-  saveToLocalStorage,
 } from "../../utils/localStorage";
 
 const initialState = {
@@ -65,8 +64,6 @@ const cartReducer = (state = initialState, action) => {
             };
           }
 
-    //   existingCartItem.find((item) => item.id === action.payload.id);
-      // const existingCartItem = state.cartItems.find(item => item.id === action.payload.id);
 
       cusAlert("Item Added To Cart Successfully", "success");
       return {

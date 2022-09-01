@@ -40,9 +40,6 @@ function Header() {
     
     setTotal(cartItems.length)
 
-
-
-
   }, [])
 
   //Log Out User Dispatch 

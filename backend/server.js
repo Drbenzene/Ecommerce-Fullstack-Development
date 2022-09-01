@@ -14,7 +14,6 @@ const __filename = fileURLToPath(import.meta.url);
 
 let __dirname = path.dirname(__filename);
 
-// const path = require('path');
 
 dotenv.config()
 
@@ -49,18 +48,18 @@ __dirname = path.resolve()
 if (process.env.NODE_ENV === 'production'){
     app.use(express.static(path.join(__dirname, '/frontend/build')));
     
-    app.get("*", (req, res) => {
+    app.get("*", (res) => {
         res.sendFile(path.join(__dirname, 'frontend', 'build', 'index.html'));
     })
 
 } else {
-    app.get('/', (req, res) => {
+    app.get('/', (res) => {
         res.send('Welcome World')
     })
 }
 
 // *****************END OF DEPLOYMENT*************************
-app.get('/', (req, res) => {
+app.get('/', (res) => {
     res.send('Welcome World')
 })
 
@@ -68,7 +67,7 @@ const start = async (PORT) => {
 
     try {
         //Connecting To Dabatabse
-        const conn = await connectDB()
+        await connectDB()
 
         //listening To Application
         app.listen(PORT, (err) => {
