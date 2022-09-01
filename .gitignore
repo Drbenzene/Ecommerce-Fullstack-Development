@@ -12,6 +12,8 @@
 # /frontend/build
 # Removing
 
+# "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+
 # misc
 .DS_Store
 .env.local
