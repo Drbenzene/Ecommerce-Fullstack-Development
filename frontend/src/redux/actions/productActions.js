@@ -37,7 +37,7 @@ const fetchProduct = () => {
     return async (dispatch) => {
         try{
             dispatch(fetchProductsRequest());
-            const response = await axios.get(`${baseUrl}/api/products/all`);
+            const response = await axios.get('http://localhost:5000/api/products/all');
             const data = response.data
             console.log(data, "data");
 
