@@ -10,6 +10,7 @@
 # production
 # /build
 # /frontend/build
+# Removing
 
 # misc
 .DS_Store
