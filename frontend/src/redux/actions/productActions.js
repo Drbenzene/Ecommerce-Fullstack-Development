@@ -2,7 +2,7 @@ import axios from 'axios';
 import { FETCH_PRODUCT_REQUEST, FETCH_PRODUCT_SUCCESS, FETCH_PRODUCT_FAILURE, FILTER_PRODUCT
  } from '../constants/productConstant';
 
-const baseUrl = window.location.origin
+const baseUrl = "https://shorpn.herokuapp.com"
 console.log(window.location.origin, "The Windows")
 
 const fetchProductsRequest = () => {
