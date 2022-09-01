@@ -3,6 +3,7 @@ import { FETCH_PRODUCT_REQUEST, FETCH_PRODUCT_SUCCESS, FETCH_PRODUCT_FAILURE, FI
  } from '../constants/productConstant';
 
 const baseUrl = window.location.origin
+console.log(window.location.origin, "The Windows")
 
 const fetchProductsRequest = () => {
     return {
