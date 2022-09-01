@@ -53,11 +53,10 @@ if (process.env.NODE_ENV === 'production'){
         res.sendFile(path.join(__dirname, 'frontend', 'build', 'index.html'));
     })
 
-
-
-
 } else {
-    start(process.env.PORT || 5000)
+    app.get('/', (req, res) => {
+        res.send('Welcome World')
+    })
 }
 
 // *****************END OF DEPLOYMENT*************************
