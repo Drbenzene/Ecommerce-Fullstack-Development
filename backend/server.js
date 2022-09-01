@@ -7,6 +7,14 @@ import colors from 'colors';
 import productRoute from './routes/productRoute.js';
 import userRoute from './routes/userRoute.js';
 import paymentRoute from './routes/paymentRoute.js';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+
+let __dirname = path.dirname(__filename);
+
+// const path = require('path');
 
 dotenv.config()
 
@@ -35,8 +43,24 @@ app.use("/api/payment", paymentRoute)
 //End of Routes 
 
 
+// *****************DEPLOYMENT*******************************
+__dirname = path.resolve()
+
+if (process.env.NODE_ENV === 'production'){
+    app.use(express.static(path.join(__dirname, '/frontend/build')));
+    
+    app.get("*", (req, res) => {
+        res.sendFile(path.join(__dirname, 'frontend', 'build', 'index.html'));
+    })
 
 
+
+
+} else {
+    start(process.env.PORT || 5000)
+}
+
+// *****************END OF DEPLOYMENT*************************
 app.get('/', (req, res) => {
     res.send('Welcome World')
 })
@@ -62,5 +86,5 @@ const start = async (PORT) => {
 
 
 //Starting Server 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 start(PORT)
