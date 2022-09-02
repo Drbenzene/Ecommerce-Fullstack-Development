@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { fetchProduct } from "../redux/actions/productActions";
-import { addToCart } from "../redux/actions/cartActions";
 import { useSelector, useDispatch } from "react-redux";
-import Header from "./Header";
 import EachProduct from "./EachProduct";
 
 function AllProducts() {

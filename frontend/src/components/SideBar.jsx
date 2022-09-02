@@ -1,9 +1,8 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { useDispatch } from 'react-redux'
 
 const SideBar = () => {
-    const dispatch = useDispatch()
+  
 
 
     const categories = [

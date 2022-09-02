@@ -1,4 +1,3 @@
-import axios from 'axios';
 import User from '../models/userModel.js';
 import got from 'got'
 
