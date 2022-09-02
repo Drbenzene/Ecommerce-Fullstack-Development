@@ -37,7 +37,7 @@ const fetchProduct = () => {
     return async (dispatch) => {
         try{
             dispatch(fetchProductsRequest());
-            const response = await axios.get('https://shorpn.herokuapp.com/api/products/all');
+            const response = await axios.get('/api/products/all');
             const data = response.data
             console.log(data, "data");
 
