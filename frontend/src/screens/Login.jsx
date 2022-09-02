@@ -27,7 +27,7 @@ function Login() {
     const loginHandler = async (e) => {
       e.preventDefault();
       try {
-        const url="http://localhost:5000/api/users/login";
+        const url="/api/users/login";
         const res = await axios.post(url, user)
         console.log(res, "The Response")
         cusAlert("Login Successfully", "success")
